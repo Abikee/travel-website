@@ -1,0 +1,182 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serifs;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: #1A1A1A;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: inherit;
+    margin-right: 50px;
+  }
+  
+  .dropbtn:hover{
+color: #091366;
+  }
+
+  .hover-target{
+    font-size: 25px;
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 13px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 50px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 100;
+  }
+  
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+  
+  .language-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .language-option:hover {
+    background: #091366;
+  }
+  
+  .language-option img {
+    width: 20px;
+    height: 15px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 600px) {
+    .dropdown-content {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  .information {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid white;
+    width: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.information > div {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 0.5;
+}
+
+.information img {
+    margin-right: 10px;
+    height: 30px;
+}
+
+.logo img {
+    height: 85px; 
+    margin-inline: 50px;
+}
+
+.location img{
+  margin-left: 60px;
+  height: 40px;
+}
+
+.location, .mail, .call {
+display: flex;
+align-items: center;     
+gap: 5px;               
+flex: 1;                
+min-width: 0;   
+}
+
+.location img {
+margin-left: 100px;
+}
+
+.location-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.6;
+  font-size: 14px;
+} 
+
+.mail {
+flex: 0.8;
+}
+
+.mail img{
+margin-right: -15px;
+}
+
+.mail a{
+  color: #6c757d;
+  text-decoration: none;
+}
+ 
+.call{
+flex: 0.6;
+}
+
+.call a {
+  text-decoration: none;
+  color: #13659b;
+}
+
+@media (max-width: 768px) {
+    .information {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .information > div {
+        margin: 5px 0;
+    }
+}
+  
