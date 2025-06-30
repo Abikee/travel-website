@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Dancing+Script:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+HR+Lijeva+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
 margin: 0;
 padding: 0;
@@ -178,4 +180,199 @@ flex: 0.6;
         margin: 5px 0;
     }
 }
+
+.background-slider {
+  position: relative;
+  width: auto;
+  height: 800px;
+  overflow: hidden;
+  z-index: 1;
+   background-size: cover;
+   display: block;
+}
+
+.chevron-right .chevron-left {
+border-radius: 50%;
+cursor: pointer;
+}
+
+.header-text {
+  position: absolute;
+  top: 2px;
+  left: 150px;
+  width: 80%;
+}
+
+.container-header {
+display: flex;
+justify-content: space-between;
+background-color: #1C1C1C;
+padding: 20px 0 20px 0;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+.container-header ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+ 
+}
+
+.menu {
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 20px;
+   font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 2);
+}
+
+.menu a:hover {
+  color: #fd7e14;
+}
+
+.search-icon {
+ display: flex;
+border-radius: 50%;
+background-color: #13659b;
+width: 45px;
+height: 45px;
+margin-right: 30px;
+margin-left: 10px;
+  position: absolute;
+  top: 15px;
+  right: 300px;
+}
+
+.search-icon:hover {
+  background-color: #37D4D9;
+}
+
+.search-icon span{
+  display: flex;
+  color: white;
+  background: none;
+  border: 0;
+  margin: 8px;
+  justify-content: center;
+align-items: center;
+font-size: 30px;
+}
+
+.search-icon a {
+  text-decoration: none;
+}
+
+.book-flight-chevron {
+  display: inline-flex;
+  align-items: center;
+  border: 2px;
+  background-color: #13659b;
+  position: absolute;
+  top: 15px;
+  right: 140px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  overflow: hidden;
   
+}
+
+.book-flight-chevron:hover::before
+.book-flight-chevron:hover:after {
+  content: '';
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+background-color: #37D4D9;
+transition: all 0.5s ease;
+z-index: -1;
+}
+
+.book-flight-chevron::before{
+  top: -50%;
+}
+
+.book-flight-chevron::after{
+  bottom: -50%;
+}
+
+.book-flight-chevron::before{
+  top: 0;
+}
+
+.book-flight-chevron::after{
+  bottom: 0;
+}
+
+.book-flight {
+display: flex;
+}
+
+.book-flight a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.chevron-icon {
+  margin-top: 3px;
+  display: flex;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  background-color: #37D4D9;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  gap: 10px;
+}
+
+.chevron-icon span {
+color: white;
+margin: 3px;
+}
+
+.hero-bag {
+  position: absolute;
+  top: 60px;
+  right: 200px;
+  z-index: 2;
+}
+
+.hero-bag img {
+  height: auto;
+  width: 90%;
+  margin-top: 80px;
+}
+
+.brush-travel {
+  position: absolute;
+  bottom: -40px;
+  right: -250px;
+  z-index: 1;
+
+}
+
+.brush-travel img {
+transform: rotate(50deg);
+height: 300;
+width: 500px;
+margin-right: 150px;
+margin-bottom: 80px;
+z-index: 2;
+}
+
+
+
+
+
