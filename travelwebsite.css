@@ -56,8 +56,7 @@ html {
     background-color: white;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     z-index: 100;
-    padding: 3px;
-    
+    padding: 3px; 
   }
   
   .dropdown:hover .dropdown-content {
@@ -191,9 +190,44 @@ flex: 0.6;
    display: block;
 }
 
-.chevron-right .chevron-left {
+.chevron-right, .chevron-left {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  top: unset;
 border-radius: 50%;
+font-size: 22px;
 cursor: pointer;
+background-color: #ffffff;
+color: #13659b;
+display: flex;
+justify-content: center;
+align-items: center;
+transform: translateX(0%) rotate(90deg);
+border: none;
+outline: none;
+}
+
+.chevron-right{
+  top: 40%;
+  left: 50px;
+  line-height: 1;
+}
+
+.chevron-left{
+  top: 50%;
+  left: 50px;
+  line-height: 2;
+}
+
+.chevron-right:hover {
+background-color: #13659b;
+color: #ffffff;
+}
+
+.chevron-left:hover {
+background-color: #13659b;
+color: #ffffff;
 }
 
 .header-text {
@@ -283,46 +317,48 @@ font-size: 30px;
   padding: 12px 22px;
   border-radius: 10px;
   overflow: hidden;
-  
-}
-
-.book-flight-chevron:hover::before
-.book-flight-chevron:hover:after {
-  content: '';
-  top: 0;
-  width: 50%;
-  height: 100%;
-  z-index: -1;
-background-color: #37D4D9;
-transition: all 0.5s ease;
-z-index: -1;
-}
-
-.book-flight-chevron::before{
-  top: -50%;
-}
-
-.book-flight-chevron::after{
-  bottom: -50%;
-}
-
-.book-flight-chevron::before{
-  top: 0;
-}
-
-.book-flight-chevron::after{
-  bottom: 0;
-}
-
-.book-flight {
-display: flex;
 }
 
 .book-flight a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
+text-decoration: none;
+color: #ffffff;
+font-size: 14px;
 }
+
+.book-flight-chevron::before,
+.book-flight-chevron::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #37D4D9;
+  inset: 0;
+  z-index: 0;
+  transform: scaleX(0) scaleY(0);
+  transform-origin: top left;
+  transition: transform 0.5s ease;
+}
+
+.book-flight-chevron::after {
+  transform-origin: bottom right;
+}
+
+.book-flight-chevron:hover::before {
+  transform: scaleX(1);
+}
+
+.book-flight-chevron:hover::after {
+  transform: scaleY(1);
+}
+
+.book-flight-chevron a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;
+  z-index: 2;
+  position: relative;
+}
+
 
 .chevron-icon {
   margin-top: 3px;
@@ -370,6 +406,28 @@ width: 500px;
 margin-right: 150px;
 margin-bottom: 80px;
 z-index: 2;
+}
+
+.new-section {
+position: relative;
+}
+
+.to-bookflight a{
+  display: inline-block;
+  position: absolute;
+  text-align: center;
+  top: 70px;
+  left: 15px;
+  padding: 10px;
+  border: 1px transparent;
+  border-radius: 3px;
+  background-color: #13659b;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 17px;
+  width: 35%;
+  height: 30px;
 }
 
 
